@@ -210,3 +210,35 @@ export const peopleData = {
     },
   ],
 };
+
+const peopleQuery = `
+  query AllPeople($first: Int, $last: Int) {
+    allPeople(first: $first last: $last) {
+      totalCount
+      people {
+        name
+        birthYear
+        eyeColor
+        gender
+        mass
+        homeworld {
+          name
+          terrains  
+        }
+        species {
+          name
+          homeworld {
+            name
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const graphQLSource = {
+  url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
+  body: peopleQuery,
+  dataField: "allPeople.people",
+  countField: "allPeople.totalCount",
+};

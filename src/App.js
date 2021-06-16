@@ -1,8 +1,11 @@
 import "./App.css";
 import { NGrid } from "./NGrid/NGrid";
+import { graphQLSource } from "./api/data";
 
 function App() {
-  return <NGrid columns={columns} />;
+  return (
+    <NGrid columns={columns} source="graphql" sourceParams={graphQLSource} />
+  );
 }
 
 const columns = [
