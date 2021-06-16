@@ -1,0 +1,15 @@
+:root {
+    --background: hsl(240, 67%, 99%);
+    --shadow: hsla(0, 0%, 0%, 0.2);
+    --primary: hsl(214, 90%, 28%);
+    --on-primary: hsl(191, 26%, 79%);
+    --secondary: hsl(204, 25%, 25%);
+    --on-secondary: hsl(204, 25%, 90%);
+    --border: hsl(204, 5%, 70%);
+    --background-even: hsl(240, 67%, 98%);
+
+    --space-1: 0.125rem;
+    --space-2: 0.25rem;
+    --space-3: 0.5rem;
+    --space-4: 1rem;
+}
